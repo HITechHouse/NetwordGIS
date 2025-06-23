@@ -107,15 +107,18 @@ user_problem_statement: "نظام وطني لتأهيل وإدارة البني�
 backend:
   - task: "User Authentication System"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented JWT-based authentication with register/login endpoints, role-based access (municipality/directorate/ministry)"
+      - working: true
+        agent: "testing"
+        comment: "Successfully tested user registration and login for all roles (municipality, directorate, ministry). JWT token generation works correctly. Error handling for duplicate registration and invalid credentials works as expected."
 
   - task: "Infrastructure Data Management"
     implemented: true
