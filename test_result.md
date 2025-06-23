@@ -122,15 +122,18 @@ backend:
 
   - task: "Infrastructure Data Management"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented CRUD operations for infrastructure items with MongoDB storage, supports coordinates and GIS data"
+      - working: true
+        agent: "testing"
+        comment: "Successfully tested CRUD operations for infrastructure items. Create, read, update, and delete operations work correctly. Filtering by type and city also works as expected."
 
   - task: "Role-based Access Control"
     implemented: true
