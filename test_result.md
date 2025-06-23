@@ -152,15 +152,18 @@ backend:
 
   - task: "GeoJSON API for Map Visualization"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented GeoJSON endpoint for map visualization with proper coordinate handling"
+      - working: true
+        agent: "testing"
+        comment: "Successfully tested GeoJSON API. The endpoint returns properly formatted GeoJSON FeatureCollection with valid coordinates. Filtering by type and city works correctly."
 
   - task: "Analytics Dashboard API"
     implemented: true
