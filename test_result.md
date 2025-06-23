@@ -137,15 +137,18 @@ backend:
 
   - task: "Role-based Access Control"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented role-based filtering where municipality users can only access their city data"
+      - working: true
+        agent: "testing"
+        comment: "Successfully verified role-based access control. Municipality users can only see data from their assigned city. Directorate users can see data from multiple cities. Ministry users can see all data."
 
   - task: "GeoJSON API for Map Visualization"
     implemented: true
